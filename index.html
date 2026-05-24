@@ -1556,90 +1556,42 @@ tr.row-total:hover td { background: #1E3A5F; }
 
   <!-- ══ COL 4: 标杆商家 ══ -->
   <div style="display:flex;flex-direction:column;gap:12px;height:100%;">
-
     <div class="dim-card" style="border-top:4px solid var(--kpi-4);;flex:none;height:380px">
       <div class="dim-card-header" style="color:var(--kpi-4);">
         <span class="dim-icon">⭐</span>
         <div>
           <div class="dim-title" onclick="switchTab('flagship')" style="cursor:pointer;">标杆商家 ↗</div>
-          <div class="dim-sub">167 家 · 周期 5/11–6/18</div>
+          <div class="dim-sub">166 家 · 周期 5/22–6/18</div>
         </div>
       </div>
-      <div class="dim-donut-wrap">
-        <canvas class="dim-donut" id="donut-flagship" width="130" height="130"
-          data-pct="0.0" data-color="#8B5CF6"></canvas>
-        <div class="dim-donut-center">
-          <div class="dim-donut-pct" style="color:var(--kpi-4);">—</div>
-          <div class="dim-donut-sub">整体达成率</div>
-        </div>
+      <div style="display:flex;align-items:center;justify-content:center;height:130px;">
+        <svg width="110" height="110" viewBox="0 0 110 110">
+          <circle cx="55" cy="55" r="40" fill="none" stroke="#e5e7eb" stroke-width="12"/>
+          <circle cx="55" cy="55" r="40" fill="none" stroke="var(--kpi-4)" stroke-width="12" stroke-dasharray="0.0 251.2" stroke-dashoffset="62.8" stroke-linecap="round" id="donut-flagship" data-pct="0.0"/>
+          <text x="55" y="51" text-anchor="middle" font-size="13" fill="#6b7280">整体达成率</text>
+          <text x="55" y="68" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--kpi-4)" class="dim-donut-pct">—</text>
+        </svg>
       </div>
-      <div class="dim-4stats"><div class="dim-4stat"><span class="dim-4val">166</span><span class="dim-4lbl">标杆商家总数</span></div><div class="dim-4stat dim-4stat-delta"><span class="dim-4val" style="color:#d97706;">0</span><span class="dim-4lbl">已达成</span></div><div class="dim-4stat" style="border-left:1px solid var(--border);"><span class="dim-4val" style="color:#16a34a;">32</span><span class="dim-4lbl">On Track</span></div><div class="dim-4stat dim-4stat-delta"><span class="dim-4val" style="color:#dc2626;">126</span><span class="dim-4lbl">预警</span></div></div></div></div>
-
-    <div class="overview-detail-card" style="border-left:3px solid var(--kpi-4);flex:1;">
+      <div class="dim-4stats">
+        <div class="dim-4stat"><span class="dim-4val">166</span><span class="dim-4lbl">标杆商家总数</span></div>
+        <div class="dim-4stat dim-4stat-delta"><span class="dim-4val" style="color:#d97706;">0</span><span class="dim-4lbl">已达成</span></div>
+        <div class="dim-4stat" style="border-left:1px solid var(--border);"><span class="dim-4val" style="color:#16a34a;">32</span><span class="dim-4lbl">On Track</span></div>
+        <div class="dim-4stat dim-4stat-delta"><span class="dim-4val" style="color:#dc2626;">126</span><span class="dim-4lbl">预警</span></div>
+      </div>
+    </div>
+    <div class="dim-card" style="flex:1;overflow-y:auto;">
       <div class="overview-detail-title">档位追踪 · 进展</div>
       <div style="display:flex;flex-direction:column;gap:8px;">
-
-        <div style="background:#EFF6FF;border-radius:8px;padding:10px 12px;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
-            <span style="font-size:12px;font-weight:700;color:#1e3a8a;">🏢 行业运营一部</span>
-            <span style="font-size:18px;font-weight:800;color:#1A56DB;">—%</span>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:11px;margin-bottom:6px;">
-            <div><span style="color:#64748b;">共</span> <strong>89家</strong></div>
-            <div><span style="color:#64748b;">已达成</span> <span style="font-weight:700;">0家</span></div>
-          </div>
-          <div style="background:#E2E8F0;border-radius:4px;height:6px;overflow:hidden;">
-            <div style="width:0.0%;height:100%;background:#1A56DB;border-radius:4px;"></div>
-          </div>
-          <div style="font-size:10px;color:#6b7280;margin-top:4px;">✅ On Track: 26 · ⚠ 预警: 62</div>
-        </div>
-        <div style="background:#F0FDF4;border-radius:8px;padding:10px 12px;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
-            <span style="font-size:12px;font-weight:700;color:#065f46;">🏢 行业运营二部</span>
-            <span style="font-size:18px;font-weight:800;color:#059669;">—%</span>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:11px;margin-bottom:6px;">
-            <div><span style="color:#64748b;">共</span> <strong>12家</strong></div>
-            <div><span style="color:#64748b;">已达成</span> <span style="font-weight:700;">0家</span></div>
-          </div>
-          <div style="background:#E2E8F0;border-radius:4px;height:6px;overflow:hidden;">
-            <div style="width:0.0%;height:100%;background:#059669;border-radius:4px;"></div>
-          </div>
-          <div style="font-size:10px;color:#6b7280;margin-top:4px;">✅ On Track: 1 · ⚠ 预警: 11</div>
-        </div>
-        <div style="background:#FFFBEB;border-radius:8px;padding:10px 12px;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
-            <span style="font-size:12px;font-weight:700;color:#78350f;">🏢 行业运营三部</span>
-            <span style="font-size:18px;font-weight:800;color:#D97706;">—%</span>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:11px;margin-bottom:6px;">
-            <div><span style="color:#64748b;">共</span> <strong>55家</strong></div>
-            <div><span style="color:#64748b;">已达成</span> <span style="font-weight:700;">0家</span></div>
-          </div>
-          <div style="background:#E2E8F0;border-radius:4px;height:6px;overflow:hidden;">
-            <div style="width:0.0%;height:100%;background:#D97706;border-radius:4px;"></div>
-          </div>
-          <div style="font-size:10px;color:#6b7280;margin-top:4px;">✅ On Track: 3 · ⚠ 预警: 45</div>
-        </div>
-        <div style="background:#F5F3FF;border-radius:8px;padding:10px 12px;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
-            <span style="font-size:12px;font-weight:700;color:#581c87;">🏢 生态商户二部（中小）</span>
-            <span style="font-size:18px;font-weight:800;color:#7c3aed;">—%</span>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:11px;margin-bottom:6px;">
-            <div><span style="color:#64748b;">共</span> <strong>55家</strong></div>
-            <div><span style="color:#64748b;">已达成</span> <span style="font-weight:700;">0家</span></div>
-          </div>
-          <div style="background:#E2E8F0;border-radius:4px;height:6px;overflow:hidden;">
-            <div style="width:0%;height:100%;background:#7c3aed;border-radius:4px;"></div>
-          </div>
-          <div style="font-size:10px;color:#6b7280;margin-top:4px;">✅ On Track: 3 · ⚠ 预警: 45</div>
-        </div>
+        <div style="background:#EFF6FF;border-radius:8px;padding:10px 12px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;"><span style="font-size:12px;font-weight:700;color:#1A56DB;">🏢 行业运营一部</span><span style="font-size:18px;font-weight:800;color:#1A56DB;">—%</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:11px;margin-bottom:6px;"><div><span style="color:#64748b;">共</span> <strong>89家</strong></div><div><span style="color:#64748b;">已达成</span> <span style="font-weight:700;">0家</span></div></div><div style="background:#E2E8F0;border-radius:4px;height:6px;overflow:hidden;"><div style="width:0.0%;height:100%;background:#1A56DB;border-radius:4px;"></div></div><div style="font-size:10px;color:#6b7280;margin-top:4px;">✅ On Track: 26 · ⚠ 预警: 62</div></div>
+        <div style="background:#ECFDF5;border-radius:8px;padding:10px 12px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;"><span style="font-size:12px;font-weight:700;color:#059669;">🏢 行业运营二部</span><span style="font-size:18px;font-weight:800;color:#059669;">—%</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:11px;margin-bottom:6px;"><div><span style="color:#64748b;">共</span> <strong>12家</strong></div><div><span style="color:#64748b;">已达成</span> <span style="font-weight:700;">0家</span></div></div><div style="background:#E2E8F0;border-radius:4px;height:6px;overflow:hidden;"><div style="width:0.0%;height:100%;background:#059669;border-radius:4px;"></div></div><div style="font-size:10px;color:#6b7280;margin-top:4px;">✅ On Track: 1 · ⚠ 预警: 11</div></div>
+        <div style="background:#FFFBEB;border-radius:8px;padding:10px 12px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;"><span style="font-size:12px;font-weight:700;color:#D97706;">🏢 行业运营三部</span><span style="font-size:18px;font-weight:800;color:#D97706;">—%</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:11px;margin-bottom:6px;"><div><span style="color:#64748b;">共</span> <strong>55家</strong></div><div><span style="color:#64748b;">已达成</span> <span style="font-weight:700;">0家</span></div></div><div style="background:#E2E8F0;border-radius:4px;height:6px;overflow:hidden;"><div style="width:0.0%;height:100%;background:#D97706;border-radius:4px;"></div></div><div style="font-size:10px;color:#6b7280;margin-top:4px;">✅ On Track: 3 · ⚠ 预警: 45</div></div>
+        <div style="background:#F5F3FF;border-radius:8px;padding:10px 12px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;"><span style="font-size:12px;font-weight:700;color:#7c3aed;">🏢 生态客户二部</span><span style="font-size:18px;font-weight:800;color:#7c3aed;">—%</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:11px;margin-bottom:6px;"><div><span style="color:#64748b;">共</span> <strong>10家</strong></div><div><span style="color:#64748b;">已达成</span> <span style="font-weight:700;">0家</span></div></div><div style="background:#E2E8F0;border-radius:4px;height:6px;overflow:hidden;"><div style="width:0.0%;height:100%;background:#7c3aed;border-radius:4px;"></div></div><div style="font-size:10px;color:#6b7280;margin-top:4px;">✅ On Track: 2 · ⚠ 预警: 8</div></div>
         <div style="margin-top:4px;padding:6px 8px;background:#F8FAFC;border-radius:6px;font-size:10px;color:#94a3b8;">
-          📅 标杆商家活动周期：2026/5/11 – 2026/6/18 · 成率数据接入后自动更新
-        
-</div><!-- end 4-col grid -->
-
+          📅 标杆商家活动周期：2026/5/22 – 2026/6/18 · 每日08:00自动更新
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 
